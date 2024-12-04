@@ -1,7 +1,7 @@
 extends Area2D
 
 # movimento da bola
-var velocidade_da_bola : float = 400.0
+var velocidade_da_bola : float = 500.0
 var posicao_inicial : Vector2 = Vector2(400, 500)
 var direcao_inicial : Vector2 = Vector2(0, 0)
 var nova_direcao : Vector2 = Vector2(0, 0)
@@ -53,8 +53,21 @@ func verificar_posicao_da_bola() -> void:
 
 	if position.x <= x_minimo or position.x >= x_maximo:
 		nova_direcao.x *= -1
+		
+	if position.y > 700:
+		sair_da_tela()
+
+
+func sair_da_tela() -> void:
+	nova_direcao = Vector2(0, 0)
+	primeiro_lancamento = true
+	resetar_bola()
 
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("paddle"):
+		nova_direcao.y *= -1
+		
+	elif body.is_in_group("blocos"):
+		body.receber_dano()
 		nova_direcao.y *= -1

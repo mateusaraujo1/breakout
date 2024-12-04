@@ -2,3 +2,5 @@ res://scenes/fases/fase_01/fase_01.tscn
 res://scenes/bola/bola.gd
 res://scenes/paddle/paddle.tscn
 res://scenes/bola/bola.tscn
+res://scenes/bloco/bloco.tscn
+res://scenes/bloco/bloco.gd

@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://ca3x4xtn62hsb"]
+[gd_scene load_steps=5 format=3 uid="uid://ca3x4xtn62hsb"]
 
 [ext_resource type="Texture2D" uid="uid://b3cxl1i1okdkn" path="res://assets/sprites/campo-roxo.png" id="1_gvwef"]
 [ext_resource type="PackedScene" uid="uid://doqqgve4oiop2" path="res://scenes/paddle/paddle.tscn" id="2_auyfh"]
 [ext_resource type="PackedScene" uid="uid://bo8nni2ai6r4b" path="res://scenes/bola/bola.tscn" id="3_racr6"]
+[ext_resource type="PackedScene" uid="uid://b87qs7545eifg" path="res://scenes/bloco/bloco.tscn" id="4_d5wf5"]
 
 [node name="Fase01" type="Node2D"]
 
@@ -15,3 +16,42 @@ position = Vector2(400, 550)
 
 [node name="Bola" parent="." instance=ExtResource("3_racr6")]
 position = Vector2(400, 500)
+
+[node name="Bloco" parent="." instance=ExtResource("4_d5wf5")]
+position = Vector2(200, 100)
+
+[node name="Bloco3" parent="." instance=ExtResource("4_d5wf5")]
+position = Vector2(300, 100)
+
+[node name="Bloco4" parent="." instance=ExtResource("4_d5wf5")]
+position = Vector2(400, 100)
+
+[node name="Bloco5" parent="." instance=ExtResource("4_d5wf5")]
+position = Vector2(500, 100)
+
+[node name="Bloco6" parent="." instance=ExtResource("4_d5wf5")]
+position = Vector2(700, 100)
+
+[node name="Bloco7" parent="." instance=ExtResource("4_d5wf5")]
+position = Vector2(653, 180)
+
+[node name="Bloco8" parent="." instance=ExtResource("4_d5wf5")]
+position = Vector2(556, 177)
+
+[node name="Bloco9" parent="." instance=ExtResource("4_d5wf5")]
+position = Vector2(456, 176)
+
+[node name="Bloco12" parent="." instance=ExtResource("4_d5wf5")]
+position = Vector2(600, 100)
+
+[node name="Bloco10" parent="." instance=ExtResource("4_d5wf5")]
+position = Vector2(364, 177)
+
+[node name="Bloco11" parent="." instance=ExtResource("4_d5wf5")]
+position = Vector2(152, 207)
+
+[node name="Bloco13" parent="." instance=ExtResource("4_d5wf5")]
+position = Vector2(265, 203)
+
+[node name="Bloco2" parent="." instance=ExtResource("4_d5wf5")]
+position = Vector2(100, 100)
