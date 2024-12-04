@@ -5,14 +5,18 @@ var posicao_inicial : Vector2 = Vector2(400, 500)
 var direcao_inicial : Vector2 = Vector2(0, 0)
 var nova_direcao : Vector2 = Vector2(0, 0)
 
+var primeiro_lancamento : bool = true
 
 
 func _ready() -> void:
 	resetar_bola()
-	escolher_direcao_inicial()
 
 
 func _process(delta: float) -> void:
+	if primeiro_lancamento:
+		if Input.is_action_just_pressed("lancar-bola"):
+			escolher_direcao_inicial()
+			primeiro_lancamento = false
 	movimentar_bola(delta)
 
 
