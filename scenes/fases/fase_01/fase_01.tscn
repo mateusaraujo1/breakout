@@ -1,8 +1,9 @@
 [gd_scene load_steps=2 format=3 uid="uid://ca3x4xtn62hsb"]
 
-[ext_resource type="Texture2D" uid="uid://hv67ptab4yj2" path="res://assets/sprites/campo-branco.png" id="1_660rb"]
+[ext_resource type="Texture2D" uid="uid://b3cxl1i1okdkn" path="res://assets/sprites/campo-roxo.png" id="1_gvwef"]
 
 [node name="Fase01" type="Node2D"]
 
 [node name="ImagemDeFundo" type="Sprite2D" parent="."]
-texture = ExtResource("1_660rb")
+position = Vector2(400, 300)
+texture = ExtResource("1_gvwef")
