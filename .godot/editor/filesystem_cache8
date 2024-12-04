@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1733312800
+::res://::1733330774
 icon.svg::CompressedTexture2D::1226838373593166256::1708610208::1733268885::1::::<><>::
 ::res://assets/::1733268722
 ::res://assets/sons/::1733268885
@@ -12,7 +12,13 @@ bola.png::CompressedTexture2D::6886226093746580366::1708610208::1733268885::1:::
 campo-branco.png::CompressedTexture2D::536614027686239333::1708610208::1733268885::1::::<><>::
 campo-roxo.png::CompressedTexture2D::4357254574798675549::1708610208::1733268885::1::::<><>::
 paddle.png::CompressedTexture2D::4173472523248031424::1708610208::1733268885::1::::<><>::
-::res://scenes/::1733269139
+::res://scenes/::1733317420
+::res://scenes/bola/::1733321814
+bola.gd::GDScript::-1::1733321814::0::1::::<>Area2D<>::
+bola.tscn::PackedScene::3438001958644704855::1733318177::0::1::::<><>::res://scenes/bola/bola.gd<>uid://c5d0exfeoxohq::::res://assets/sprites/bola.png
 ::res://scenes/fases/::1733269155
-::res://scenes/fases/fase_01/::1733269292
-fase_01.tscn::PackedScene::4832093461378240553::1733269292::0::1::::<><>::uid://hv67ptab4yj2::::res://assets/sprites/campo-branco.png
+::res://scenes/fases/fase_01/::1733317980
+fase_01.tscn::PackedScene::4832093461378240553::1733317980::0::1::::<><>::uid://b3cxl1i1okdkn::::res://assets/sprites/campo-roxo.png<>uid://doqqgve4oiop2::::res://scenes/paddle/paddle.tscn<>uid://bo8nni2ai6r4b::::res://scenes/bola/bola.tscn
+::res://scenes/paddle/::1733317980
+paddle.gd::GDScript::-1::1733316571::0::1::::<>StaticBody2D<>::
+paddle.tscn::PackedScene::8175919203230643601::1733317980::0::1::::<><>::uid://b0pwqoajkr2am::::res://assets/sprites/paddle.png<>res://scenes/paddle/paddle.gd
