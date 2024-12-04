@@ -1,10 +1,18 @@
 extends Area2D
 
+# movimento da bola
 var velocidade_da_bola : float = 400.0
 var posicao_inicial : Vector2 = Vector2(400, 500)
 var direcao_inicial : Vector2 = Vector2(0, 0)
 var nova_direcao : Vector2 = Vector2(0, 0)
 
+#limites da bola
+var x_minimo : float = 0
+var x_maximo : float = 800
+var y_minimo : float = 0
+var y_maximo : float = 600
+
+#verificações
 var primeiro_lancamento : bool = true
 
 
@@ -18,6 +26,7 @@ func _process(delta: float) -> void:
 			escolher_direcao_inicial()
 			primeiro_lancamento = false
 	movimentar_bola(delta)
+	verificar_posicao_da_bola();
 
 
 func resetar_bola() -> void:
@@ -34,3 +43,18 @@ func escolher_direcao_inicial() -> void:
 
 func movimentar_bola(delta : float) -> void:
 	position += nova_direcao * velocidade_da_bola * delta
+
+
+func verificar_posicao_da_bola() -> void:
+	#se tiver dentro da tela, a rebate ao colidir com as bordas
+	if position.y <= y_maximo:
+		if position.y <= y_minimo:
+			nova_direcao.y *= -1
+
+	if position.x <= x_minimo or position.x >= x_maximo:
+		nova_direcao.x *= -1
+
+
+func _on_body_entered(body: Node2D) -> void:
+	if body.is_in_group("paddle"):
+		nova_direcao.y *= -1
